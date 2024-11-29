@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> <!-- character encoding untuk menghindari tampilan kotak-kotak-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- device width agar menyesuaikan tampilan device sehingga responsive dan scale 1.0 yaitu 100% full-->
+    <title>Halaman Login</title>
+    <link rel="stylesheet" href="assets/style/style.css">
+</head>
+<body>
+    <div class="login-container">
+        <!-- Logo Universitas -->
+        <img src="assets/img/UNPAM_logo1.png" alt="Logo Universitas Pamulang"> <!-- Ganti dengan URL logo universitas -->
+
+        <h2> FORM LOGIN </h2>
+        <!-- Form Login -->
+        <form onsubmit="return validateForm()">
+            <input type="text" name="username" placeholder="username" required>
+            <input type="password" name="password" placeholder="password" required>
+            <button type="submit">Login</button>
+        </form>
+
+        <!-- Teks tambahan -->
+        <div class="text">
+            <p>Belum punya akun? <a href="https://daftar.com">Daftar di sini</a></p>
+            <p><a href="#">Lupa password</a></p>
+        </div>
+    </div>
+    
+</body>
+</html>

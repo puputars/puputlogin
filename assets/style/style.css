@@ -1,0 +1,114 @@
+/* Mengatur background pada body */
+body {
+    background-image: url('../img/background.png'); 
+    background-size: cover; /*cover agar gambarnya satu, sedangkan contain bisa terdistrosi sehingga banyak gambar*/
+    background-position: center;
+    font-family: 'Montserrat', sans-serif;
+    display: flex; /*untuk responsive isi div nya*/
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(116, 105, 105, 0.5); /* Warna hitam dengan opasitas 50% */
+    pointer-events: none; /* Memastikan overlay tidak mengganggu interaksi */
+    z-index: 1; /* Menempatkan overlay di atas gambar background */
+}
+
+
+
+/* Mengatur tampilan kotak login */
+.login-container {
+    position: relative;
+    z-index: 2;
+    background: linear-gradient(145deg, #ffffff, #e6e6e6);
+    padding: 40px 30px;
+    width: 350px;
+    border-radius: 15px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2), -5px -5px 10px rgba(255, 255, 255, 0.7);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.login-container:hover {
+    transform: scale(1.02); /* Efek zoom saat hover */
+}
+
+/* Mengatur logo universitas */
+.login-container img {
+    width: 200px;
+    border-radius: 0%;
+    margin-bottom: 0px;
+}
+
+/* Mengatur text box username dan password */
+.login-container input[type="text"],
+.login-container input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 25px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    box-shadow: inset 3px 3px 6px rgba(0, 0, 0, 0.1), inset -3px -3px 6px rgba(255, 255, 255, 0.7);
+    outline: none;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.login-container input[type="text"]:focus,
+.login-container input[type="password"]:focus {
+    border-color: #0000fe;
+    box-shadow: inset 4px 4px 8px rgba(0, 0, 0, 0.2), inset -4px -4px 8px rgba(255, 255, 255, 0.8);
+}
+
+/* Mengatur tombol submit */
+.login-container button {
+    background-color: #0000fe;
+    color: #fff;
+    padding: 12px;
+    width: 100%;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s, transform 0.3s;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2), -3px -3px 6px rgba(255, 255, 255, 0.3);
+    margin-top: 15px;
+}
+
+.login-container button:hover {
+    background-color: #0000cc;
+    transform: translateY(-2px);
+}
+
+/* Mengatur hyperlink "Daftar di sini" */
+.login-container a {
+    color: #0000fe;
+    text-decoration: none;
+}
+
+.login-container a:hover {
+    text-decoration: underline;
+}
+
+.login-container input[type="text"],
+.login-container input[type="password"] {
+    margin-bottom: 15px; /* Menambahkan jarak antar input */
+}
+
+
+/* Mengatur teks tambahan */
+.login-container .text {
+    margin-top: 15px;
+    font-size: 14px;
+}
